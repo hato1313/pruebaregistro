@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <form id="miformulario" method="post" action="registro.php">
+        <h2>Formulario de registro</h2>
+        <label for="texto">Nombre de Mascota:</label><br/>
+        <input type="text" name="nombreMascota" id="nombreMascota"><br/><br/>
+        <label for="texto">Login de Propietario:</label><br/>
+        <input type="text" name="loginPropietario" id="loginPropietario"><br/><br/>
+        <label for="texto">Contraseña:</label><br/><input type="text" name="contraseña" id="contraseña"><br/><br/>
+        <label for="texto">Repite la constraseña:</label><br/><input type="text" name="contraseña2" id="contraseña2"><br/><br/>
+        <label for="texto">Especie:</label><br/><input list="especies" id="inputespecies" name="getespecies"><br/>
+        <datalist id="especies">
+          <option value="0" selected>Seleccione especie</option>
+          <option value="Abisinio">Abisinio</option>
+          <option value="Inseparable de Lilian">Inseparable de Lilian</option>
+          <option value="Malgache">Malgache</option>
+          <option value="Acollarado">Acollarado</option>
+          <option value="Inseparable de Mejillas negras">Inseparable de Mejillas negras</option>
+          <option value="Amarillo y naranja">Amarillo y naranja</option>
+        </datalist><br/>
+      
+        <label for="texto">Sexo:</label><br/><input class="radiobutton" type="radio" name="sexo" id="sexoM" Value="macho" checked>
+        <!-- Dejamos macho por defecto -->
+        <label for="texto">Macho</label><input class="radiobutton" type="radio" name="sexo" id="sexoH" value="hembra"><label for="texto">Hembra</label><br/><br/><br/>
+        <input type="reset" name="limpiar" id="limpiar" value="Reiniciar Formulario" />
+        <input type="button" id="limpiarcampo" name="limpiarcampo" value="Limpiar Campo"><br/>
+        <input type="submit" id="enviar" name="enviar" value="Enviar"><br/>
+      </form><div style="height: 500px"></div>
+</body>
+</html>

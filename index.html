@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/cf6780830b.js" crossorigin="anonymous"></script>
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    
+        <form class="form-registro"  id="form-registro" method="post" action="index.php">
+            <h4>FORMULARIO DE REGISTRO</h4>
+            <label for="texto">Rut</label>
+            <input class="controls" type="text" name="rut" id="rut" placeholder="12345678-9" minlength="11" maxlength="12" onkeyup="formatCliente(this)" required>
+            <script type="text/javascript">
+            function formatCliente(Rut)
+            {Rut.value=Rut.value.replace(/[.-]/g, '')
+            .replace( /^(\d{1,2})(\d{3})(\d{3})(\w{1})$/, '$1.$2.$3-$4')}
+            </script>
+            <label for="texto">Nombres</label>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre(s)" required>
+            <label for="texto">Apellidos</label>
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+            <label for="texto">Dirección</label>
+            <input class="controls" type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+            <label for="texto">Ciudad</label>
+            <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad" required>
+            <label for="texto">Telefono</label>
+            <input class="controls" type="tel" name="telefono" id="telefono" placeholder="+56912345678" minlength="12" maxlength="12" required>
+            <label for="texto">Email</label>
+            <input class="controls" type="email" name="email" id="email" placeholder="ejemplo@ejemplo.com"required>
+            <label for="texto">Fecha de nacimiento</label>
+            <input class="controls" type="date" name="fechadenacimiento" id="fechadenacimiento" required>
+            <label for="texto">Estado Civil</label> 
+            <br>
+
+            <input class="controlss" type="radio" name="estadocivil" id="estadosoltero" value="soltero"required>
+            <label for="Estadosoltero">Soltero</label>
+
+            <input class="controlss" type="radio" name="estadocivil" id="estadocasado" value="casado"required>
+            <label for="Estadocasado">Casado</label>
+            
+            <br>
+            <label for="asd">Comentario</label>
+            <input class="controls" type="text" name="comentarios" id="comentarios" placeholder="Comentario">
+
+            <input class="botons" type="submit" value="Guardar">
+            <input class="botons" type="reset" value="Limpiar" id="limpiar" name="limpiar"/>
+            <input class="botons" type=button name=boton value=Cerrar onclick="window.close()">
+        
+        </form>
+        
+        <form action="index.php" class="form-busqueda">
+            <input type="search" name="q" placeholder="Apellido a buscar" autofocus required>
+            <input type="submit" value="Buscar"> 
+        </form>
+
+
+</body>
+
+</html>
